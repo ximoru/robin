@@ -1,0 +1,43 @@
+@charset 'utf-8';
+/*通用样式*/
+
+body{color:#666;font:.36rem/1.5 Helvetica,'Microsoft YaHei','simsun';word-wrap:break-word;background:#fff;}
+body,div,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,li,ol,p,table,tr,th,td,form,input,textarea{margin:0;padding:0;}
+ul,li,ol{list-style:none outside none;}
+img{border:0 none;vertical-align:top;}
+input,button,textarea,select,optgroup,option{font-family:Helvetica,'Microsoft YaHei','simsun';font-style:inherit;font-weight:inherit;outline:none;}
+table{border-collapse:collapse;border-spacing:0;}
+a{color:#666;text-decoration:none;}
+*{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;}
+.fr{float:right;}
+.fl{float:left;}
+.nowrap{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;word-wrap:normal;}
+.transition{-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}
+.clear{clear:both;height:0;width:0;overflow:hidden;}
+.red{color:#fa5259;}
+.blue{color:#3d9fe1;}
+.orange{color:#ff7726;}
+.gray{color:#999;}
+.black{color:#333;}
+.yellow{color:#fee862;}
+.white{color:#fff;}
+.gray-bg{background: #f8f8f8;}
+.white-bg{background: #fff;}
+.hide{display:none;}
+.hide-imp{display:none !important;}
+.bold{font-weight:700;}
+.block{display:block;}
+.hidden{overflow:hidden;}
+.center{text-align:center;}
+.underline{text-decoration:underline;}
+.indent{text-indent:2em}
+.tal{text-align:left;}
+.tar{text-align:right;}
+.line1{line-height:1;}
+.line12{line-height:1.2;}
+.line2{line-height:2;}
+.justify{text-align:justify;}
+.pb10{padding-bottom: 10px;}
+.pt10{padding-top: 10px;}
+.pr10{padding-right: 10px;}
+.pl10{padding-left: 10px;}

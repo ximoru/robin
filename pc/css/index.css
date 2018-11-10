@@ -1,0 +1,170 @@
+@charset 'utf-8';
+
+/*页面样式*/
+body{background-color:#1B1B1B}
+.container-wrap{min-width:1200px;overflow: hidden}
+.container{position: relative;z-index:99;overflow: hidden;}
+
+/*首页*/
+.ronbin-wrap{width: 1200px;max-width: 1440px;margin:auto;}
+.ronbin-signal{position: absolute;top:340px;text-align: center;color:#fff;left:0;right:0;}
+.ronbin-signal .title{font-size:100px;letter-spacing:-2px;font-weight:400;}
+.ronbin-signal .text{font-size:36px;letter-spacing:-2px;opacity: .8;font-family: 'DFHei-Lt-HKP-BF';line-height:36px;font-family: 'DFHei-Lt-HKP-BF'}
+.ronbin-data{position: absolute;top:672px;text-align: center;color:#fff;left:0;right:0;}
+.ronbin-data .content{max-width: 1440px;margin:auto;}
+.ronbin-data .content{font-size: 0;text-align: center;}
+.ronbin-data .content li{float: left;vertical-align:top;width:33.3%;}
+.ronbin-data .content li .cont{position: relative;cursor: pointer;padding:25px;display: block;background-color:rgba(255,255,255,0.65);margin:0 auto;width:370px;height:590px;}
+.ronbin-data .content li .cont:hover{box-shadow: 0 2px 20px #eee}
+.ronbin-data .content .title p{text-align:left;color:#000;line-height:33px;font-family: 'PingFangSC-Semibold';}
+.ronbin-data .content .currencies-main{height:auto;background-color: #fff;min-height:200px;max-height: 381px;overflow: hidden;}
+.ronbin-data .content .currencies-main .title{height: 20px;font-size:16px;color:#000;padding-top:20px;}
+.ronbin-data .content .currencies-main .title span{width: 115px;display:inline-block;vertical-align:top}
+.ronbin-data .content .currencies-height{overflow: hidden;padding:11px 25px;}
+.ronbin-data .content .currencies{position: relative;overflow: hidden}
+.ronbin-data .content .currencies li{overflow:hidden;display: block;width:100%;font-size: 16px;color:#333;}
+.ronbin-data .content .currencies li>span{float:left;margin:11px 0;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.ronbin-data .content .currencies li .marteks{width: 90px;margin-right:30px}
+.ronbin-data .content .currencies li .sell{width: 80px;margin-right:25px;color:#fff;border-radius:5px;background-color:#4695ce;}
+.ronbin-data .content .currencies li .buy{width:80px;float: right;color:#fff;border-radius:5px;background-color:#4695ce;}
+.ronbin-data .content .currencies li .red{background-color:#d64d44;}
+.ronbin-data .content .currencies .title span{background-color:transparent;color:#333;}
+.ronbin-data .content .middel .text dd{padding-bottom: 20px;}
+.ronbin-data .content .last dd{margin-bottom:15px;}
+.ronbin-data .content .text{color:#333;font-size: 18px;color:#000;line-height: 30px;text-align:left;}
+.ronbin-data .content .button{background-color:#8e8062;color:#fff;font-size: 18px;padding:5px 20px;position: absolute;bottom:20px;right:25px;}
+
+.ronbin-system{background-color:#fff;height: 530px;margin:auto;max-width:1440px}
+.ronbin-system .title{padding:79px 0 40px;text-align: center;color:#4A4A4A;}
+.ronbin-system .title dt{font-size:32px;line-height:42px;font-family: 'PingFangSC-Semibold';font-weight:700}
+.ronbin-system ul{font-size: 0;text-align: center;}
+.ronbin-system ul>li{display: inline-block;*display: inline;*zoom:1;vertical-align: top;width:20%;color:#4A4A4A ;font-size: 14px;line-height:17px;}
+.ronbin-system ul img{cursor: pointer;-webkit-transition: -webkit-transform 0.2s ease-out;-moz-transition: -moz-transform 0.2s ease-out;-o-transition: -o-transform 0.2s ease-out;-ms-transition: -ms-transform 0.2s ease-out;}
+.ronbin-system ul img:hover{-webkit-transform: rotateY(180deg);-moz-transform: rotateY(180deg);-o-transform: rotateY(180deg);-ms-transform: rotateY(180deg);transform: rotateY(180deg);}
+
+/*关于我们*/
+.aboutUs ,.product ,.partners,.privacy{width: 1440px;position: relative;left: 50%;top: 0;margin-left: -720px;overflow: hidden;background:url(..//images/bg4.png) no-repeat center top #f2f2f2;}
+.aboutUs .company ,.partners .company{width: 1024px;background-color: #fff;margin-top: 286px;margin:286px auto 0;}
+.aboutUs .company .title ,.partners .company .title{background: #F2F2F2;line-height:40px;font-size:28px;text-align: center;color:#4A4A4A;padding:10px 0;}
+.aboutUs .company dl{margin:40px 0 0 30px;padding-bottom: 100px;overflow: hidden;width:602px;font-size: 18px;line-height: 38px;color:#4A4A4A;font-family:'PingFangSC-Regular'}
+.aboutUs .company img{float: right;margin:200px 60px 0 0;}
+
+/*产品*/
+.product{background:url(../images/bg11.png) no-repeat center top #f2f2f2;height:3598px;background-size:cover;}
+.product .content-box1{margin:184px 0 0 104px}
+.product .content-box1 .bg{background-color:#e1d9c1;width: 722px;padding:0 20px;margin-bottom:5px}
+.product .content-box1 .bg-width{width:180px;}
+.product .content-box1 .soon{border:1px solid #fff;border-radius: 5px;width:290px;padding:0 20px;margin-top:25px;}
+.product .content-box1 .qrcode{padding:50px 0 0;}
+.product .content-box1 .qrcode .inline{display: inline-block;vertical-align: top;*display:inline;*zoom:1;}
+.product .content-box1 .icon{width:70px;height:70px;margin:30px  15px 0 0;}
+.product .content-box1 .qrcode .img{width:160px;height:144px;}
+.product .content-box1 .icon img{width:70px;height:70px;margin-right: 60px;}
+.product .content-box2{margin-left: 622px;margin-top:240px;}
+.product .content-box3{margin-left:74px;width: 704px;text-align: right;margin-top:360px}
+.product .content-box4{margin:605px 0 0 622px;}
+.product .content-box5{margin:605px 0 0 134px;text-align:right;width:704px;}
+.product .main{padding:30px 0 0 30px;}
+
+.product .content-box1.active ,.product .content-box3.active ,.product .content-box5.active{
+	display: block !important;
+	-webkit-animation-delay: 0ms;
+	animation-delay: 0ms;
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;
+}
+.product .content-box2.active ,.product .content-box4.active{
+	display: block !important;
+	-webkit-animation-delay: 0ms;
+	animation-delay: 0ms;
+	-webkit-animation-name: slideInRight;
+	animation-name: slideInRight;
+}
+
+
+/*合作*/
+.partners .company .main{padding:40px  30px}
+.partners .main .ifmtrade{margin-right: 20px;}
+.partners .main .ifmtrade ,.partners .main .tradeMax{padding:30px 20px 65px;background-color: #fff;width:430px;float: left;border:1px solid #B3B1B1;box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);}
+.partners .main .tl{text-align: center;color:#4A4A4A;}
+.partners .main .tl img{display: block;margin:auto;margin-bottom:10px;}
+.partners .main dl{font-size: 13px;color:#4A4A4A;line-height: 24px;height:880px;}
+.partners .main dt{padding:15px 0 25px}
+
+/*协议和免责声明*/
+.privacy{background: url(..//images/bg5.png) no-repeat center top #fff;width: 1440px;padding-top: 126px;}
+.privacy .title{background: #F2F2F2;margin-top:-22px;text-align: center;padding:25px 0;color:#4A4A4A;}
+.privacy .main{padding:20px 0 40px;}
+.privacy .main dl{padding-bottom:25px;width: 1242px;margin:auto}
+.privacy .main dt{color:#4A4A4A;font-size: 20px;font-weight: 700;padding-bottom: 10px;}
+.privacy .main dd{color:#333;line-height:32px;font-size:18px;}
+.privacy .disclaimer dd{margin-bottom:36px;}
+
+/*动画*/
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px)
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px)
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px)
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+.animated{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;}
+
+
+   
+    

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+	<meta name = "format-detection" content = "telephone=no">
+	<title>分享</title>
+    <script>
+        document.documentElement.style.fontSize = Math.min(innerWidth / 20, 24) + 'px'
+    </script>
+    <link rel="stylesheet" href="./css/base.css">
+    <style type="text/css">
+       .share{background-color: #fff0d5;text-align: center;color:#000;}
+       .share-qrcode{text-align: center;font-size:0;padding:15px 0;}
+       .share-qrcode dl{display: inline-block;vertical-align:top;margin: 0 20px;}
+       .share-qrcode img{width:100px;height:100px;display:block;border-radius: 15px;border:3px solid #fff;margin:auto;}
+       .share-qrcode dd{font-size:16px;padding-top: 10px;}
+       .share .copy{padding-bottom:20px;}
+    </style>
+</head>
+<body>
+	<div class="share">
+        <div class="share-qrcode">
+            <dl>
+                <dt><img src="./img/android.png" data-img="./img/android.png" alt="robinjf安卓"/></dt>
+                <dd>Robin Fin <span class="orange">安卓</span>下载</dd>
+            </dl>
+            <dl>
+                <dt><img src="./img/iOS.png" data-img="./img/iOS.png" alt="robinjfIos"/></dt>
+                <dd>Robin Fin<span class="orange"> ios</span>下载</dd>
+            </dl>
+        </div>
+        <div class="copy">此内容来源Robin Fin App分享，<br>想了解更多请扫描上方二维码进行下载。 </div>
+    </div>
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+</body>
+</html>
