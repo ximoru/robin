@@ -1,0 +1,9 @@
+@charset 'utf-8';
+ body{background: #eeee;margin-bottom: 8px}
+.download{height: 100vh;color:#000;padding:0 33px;max-width: 750px;margin:8px auto 0;background-color: #fff;}
+.download .title{font-size:16px;color:#4A4A4A;line-height: 30px;}
+.download img{width:100%;display: block;margin:auto;}
+.download dd:last-child{text-align: center;padding:30px 0;display: block;}
+.download .btn{width:140px;height:36px;margin:0 auto 16px;display: block;background-color: #333;background: url(../img/appStore.png) no-repeat center top;background-size:100% 100%;}
+.download .and_btn{width:120px;height:31px;background: url(../img/android_download.png) no-repeat center top;background-size:100% 100%;}
+.download .google_lay{background:url(../img/google_play.png) no-repeat center top;background-size:100% 100%;}
