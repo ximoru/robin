@@ -56,6 +56,7 @@
 
 .index-three .title{background-position: -667px -45px;}
 .index-three .signal-list .item{background-color: #313130;border-radius: 5px;margin-top: 20px;padding:10px 15px 10px 40px;}
+.index-three .signal-list .disabled .item-btn{cursor: not-allowed;}
 .index-three .item li{width: 33%;float: left;color:#fff;padding-top:20px;}
 .index-three .item  .progress{padding:25px 0;}
 .index-three .item  .progress .bar{margin: 5px 15px 0 0;width:190px;line-height: 7px;background-color:#000;border-radius: 30px;height:7px;text-align: center}
