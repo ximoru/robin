@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+    <title>注册</title>
+    <script>
+        document.documentElement.style.fontSize = Math.min(innerWidth / 20, 24) + 'px'
+    </script>
+    <script src="../js/jquery.min.js"></script>
+    <link href="../css/register.css?time=20181121" rel=stylesheet>
+    <style>
+        .pt-20 {
+            padding-top: 3rem;
+        }
+        .address {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            border: 1px solid #eee;
+            background-color: #eee;
+        }
+        .address .select{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            border: 0;
+            background-color:inherit;
+            color:#999;
+        }
+    </style>
+</head>
+<body>
+<div class=pb-10></div>
+<div class="bg-box-1 py-20 por">
+    <div class="poa w-100 t-0 mt-12 logo-reg py-20"></div>
+</div>
+<div class="form-reg bg-box-2 px-13 pt-20" >
+    <!--<form action=/Client/newSign class="form-reg bg-box-2 px-13 pt-20" method="post">-->
+    <div class="mb-7 fz-md">我是 <span>Robin小杨</span>，邀请你加入RobinFin</div>
+    <input type=text hidden class=input id=ticket name=ticket value=W3ROAI >
+    <div class="ctrl-wrap mb-7">
+        <input type=text name=nickname id=nickname class=input placeholder=请输入你的昵称>
+    </div>
+    <div class="ctrl-wrap mb-7">
+        <input type=text name=phone  id="phone" class="input input-tel" placeholder=请输入手机号码>
+    </div>
+    <div class="flex space-between mb-7"><div class="ctrl-wrap flex-1 mr-5">
+            <input type=text name=captcha id=captcha  class=input placeholder=请输入验证码>
+        </div>
+        <button type=button  class="btn btn-sms btn-primary" id="get-captcha" onclick="sandSms()" >获取验证码</button>
+    </div>
+    <div class="ctrl-wrap mb-7 address">
+        <select class="select" id="province">
+            <option hidden value="">请选择省份</option>
+        </select>
+        <select class="select" id="city">
+            <option hidden value="">请选择城市</option>
+        </select>
+        <select class="select" id="town" name="city_id">
+            <option hidden value="">请选择地区</option>
+        </select>
+    </div>
+    <div class="ctrl-wrap mb-7">
+        <input type=password name=password id=password class="input input-pwd" placeholder=请输入密码>
+    </div>
+
+    <div class="mt-12 mb-10">
+        <button  onclick="submitNewSign()" class="btn w-100 c-f fz-md btn-submit">确认注册</button>
+    </div>
+    <div class="tac light-2 fz-sm pb-10">
+        <span>——</span> <span class=px-5>RobinFin</span> <span>——</span>
+    </div>
+</div>
+</body>
+<script src="../js/cityData.js"></script>
+<script type="text/javascript">
+
+    $(function() {
+        var html = '<option hidden value="">请选择省份</option>';
+        for(var i = 0; i < cityData.length; i++) {
+            html += '<option data-index="'+i+'">'+cityData[i].name+ '</option>'
+        }
+        $('#province').html(html);
+
+        $('#province').on('change', function() {
+            var index = $(this).find('option:selected').data('index');
+            var html = '<option hidden value="">请选择城市</option>';
+            var child = cityData[index].child;
+            for(var i = 0; i < child.length; i++) {
+                html += '<option data-index="'+i+'">'+child[i].name+ '</option>';
+            }
+            $('#city').html(html);
+            $('#town').html('<option hidden value="">请选择地区</option>');
+        });
+
+        $('#city').on('change', function() {
+            var parent_index = $('#province').find('option:selected').data('index');
+            var index = $(this).find('option:selected').data('index');
+            var html = '<option hidden value="">请选择地区</option>';
+            var child = cityData[parent_index].child[index].child;
+            for(var i = 0; i < child.length; i++) {
+                html += '<option value="'+child[i].id+'">'+child[i].name+ '</option>';
+            }
+            $('#town').html(html);
+        });
+    })
+
+    var countdown = 59;
+
+    function submitNewSign(){
+        var url = "http://apiv2.robinjf.com/api/user/register";
+        if( '' == $('#nickname').val()){
+            alert("请输入昵称");return;
+        }
+        if( '' == $('#phone').val()){
+            alert("请输入手机号");return;
+        }
+        if( '' == $('#town').val()){
+            alert("请选择地区");return;
+        }
+        if( '' == $('#password').val()){
+            alert("请输入密码");return;
+        }
+
+        var data = {
+            ticket       : $('#ticket').val(),
+            nickname     : $('#nickname').val(),
+            phone        : $('#phone').val(),
+            captcha      : $('#captcha').val(),
+            city_id      : $('#town').val(),
+            password     : $('#password').val()
+        };
+        console.log(data)
+        $.ajax({
+            type: "post",
+            url: url,
+            dataType: "json",
+            data: data,
+            error: function (res) {
+                console.log(res.responseJSON);
+                alert(res.responseJSON.error_msg);
+
+            },
+            success: function (str) {
+                if (str.succ)
+                {
+                    alert(str.msg);
+                    if(isIos()) {
+                        window.location.href = 'https://download.robinjf.com';
+                    } else {
+                        window.location.href = 'https://fir.im/hc4k';
+                    }
+                } else {
+                    alert(str.msg);
+                }
+            }
+        });
+    }
+
+    function isIos() {
+        var u = navigator.userAgent;
+        if (/(iPhone|iPad|iPod|iOS|Mac)/i.test(u)) { //判断iPhone|iPad|iPod|iOS|Mac
+            //alert(navigator.userAgent);
+            return true;
+        }
+
+        return false;
+    }
+
+    function sandSms() {
+        // 异步获取签名
+        var url = "http://apiv2.robinjf.com/api/public/captcha";
+        var data = {
+            phone : $('#phone').val()
+        };
+        $.ajax({
+            type: "post",
+            url: url,
+            dataType: "json",
+            data: data,
+            error: function (res) {
+                alert(res.responseJSON.msg);
+            },
+            success: function (str) {
+                if (str.succ)
+                {
+                    settime('#get-captcha');
+                } else {
+                    alert(str.msg);
+                }
+            }
+        });
+    }
+
+    function settime(obj) {
+        if (countdown <= 0 || !countdown) {
+            $(obj).attr("disabled",false);
+            $(obj).text("获取验证码");
+            countdown = 59;
+            return;
+        } else {
+            $(obj).attr("disabled",true);
+            $(obj).text("(" + countdown + ") s 重新发送");
+            --countdown;
+            setTimeout(function() {
+                        settime(obj) }
+                    ,1000);
+        }
+    }
+</script>
+</html>
