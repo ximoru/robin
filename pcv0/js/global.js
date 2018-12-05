@@ -4,8 +4,7 @@ $(function(){
     global.sliderEvent();
     global.sliderButtonEvent();
     global.init()
-
- // 菜单下拉
+    //  菜单下拉
     $(".header-nav-main li").hover(function(){
      $(this).find(".classification").slideToggle();    
     },function(){
@@ -22,6 +21,29 @@ $(function(){
             $(this).html("点我收起")
         } 
     })
+    // 
+    var btn = $('.moheader_btn')
+    btn.on("click",function(){
+        if(btn.hasClass("on")){
+            btn.removeClass('on')
+            $('.headerdrop').hide()
+        }else{
+            btn.addClass('on')
+            $('.headerdrop').show()
+        } 
+    })
+    $('.headerdrop li').on("mouseover",function(){
+        var hit = $(this).find('.hit')
+        hit.addClass('one')
+        $(this).find('.menu_drop').show()
+        
+    })
+    $('.headerdrop li').on("mouseleave",function(){
+        var hit = $(this).find('.hit')
+            hit.removeClass('one')
+           $(this).find('.menu_drop').hide() 
+    })
+
 });
 
 // 产品动画

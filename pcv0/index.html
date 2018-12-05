@@ -7,10 +7,11 @@
     <meta name="description" content="ROBINFIN" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name = "format-detection" content = "telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel='shortcut icon' href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/swiper.min.css?t=20181204">
 </head>
 <body>
 
@@ -46,9 +47,43 @@
             </ul>
             <div class="clear"></div>
         </div>
+    </div>
+    <div  class="moheader">
+        <a href="index.html" class="header-nav-logo block"><img src="./images/logo.png" alt=""></a>
+        <div class="moheader_btn fr ">
+            <p class="btn1"></p>
+            <p class="btn2"></p>
+        </div>
+    </div>
+    <div  class="headerdrop">
+        <ul class="menu">
+            <li>
+                <a href="index.html">网站首页</a>
+            </li>
+            <li>
+                <a href="about.html">关于我们<i class="hit"></i></a>
+                <div class="menu_drop">
+                    <a href="technology.html">技术内核</a>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;">交易指南<i class="hit"></i></a>
+                <div class="menu_drop">
+                    <a href="rules.html" >跟单规则</a>
+                    <a href="choose.html">选择大咖</a>
+                </div>
+            </li>
+            <li>
+                <a href="partners.html">合作伙伴<i class="hit"></i></a> 
+                <div class="menu_drop">
+                    <a href="business.html">合作劵商</a>
+                </div>
+            </li>
+            <li><a href="product.html" >下载APP </a></li>
+        </ul>
     </div>  
     <!-- 顶部 end -->
-
+   
     <!-- bnaner -->
     <div class="banner relative">
         <div class="banner-bg">
@@ -100,9 +135,10 @@
             <div class="index-two">
                <div class="icon title"></div>
                <div class="index-two-cont">
-                   <div class="index-two-open mr30">
+                   
+                   <div class="index-two-open fl">
                        <dl>
-                           <dt>
+                           <dt class="pb30">
                                <span class="text">开放区</span>
                                <span>红包可用</span>
                                <span>镜像跟单</span>
@@ -110,7 +146,7 @@
                            </dt>
                            <dd>
                                <p class="historical">3.2%~12% <br><span>历史平均收益率</span></p>
-                               <p class="font16 pt20"><span class="mr30">随时出入金</span> <span class="pl30">500美金起跟</span></p>
+                               <p class="cour"><span>随时出入金</span> <span>500美金起跟</span></p>
                            </dd>
                            <dd class="link">
                                <a href="product.html" class="btn">立即跟单</a>
@@ -119,20 +155,19 @@
                        </dl>
                        <div class="icon earning">
                            <p class="gray font14">获得收益</p>
-                           <p class="font36 bold pt10">1.00%</p>
+                           <p class="font36 bold">1.00%</p>
                            <p class="btn1"><a href="product.html">点我跟单</a></p>
                        </div>
                    </div>
-                   <div class="index-two-close">
+                   <div class="index-two-close hidden ">
                        <dl>
                            <dt class="bold">封闭区</dt>
-                           <dd class="font20"><span class="font32 bold">80% </span>盈利概率</dd>
-                           <dd class="font20 pb20">净值回撤低于<span class="font32 bold">30%</span></dd>
-                           <dd class="font16 center pt20 orange ">封闭期周期10周</dd>
+                           <dd class="font16"><span class="font28 bold">80% </span>盈利概率</dd>
+                           <dd class="font16 pb20">净值回撤低于<span class="font28 bold">30%</span></dd>
+                           <dd class="font16 center pt10 orange ">封闭期周期10周</dd>
                            <dd class="center"><a href="product.html" class="btn whiteColor">立即参与</a></dd>  
                        </dl>
-                   </div>
-                   <div class="clear"></div>
+                    </div>
                </div>
             </div>
             <div class="index-three">
@@ -441,7 +476,7 @@
                                     <span class="font14 gray">类型</span>
                                 </p>
                                 <p>
-                                    <span>$1000</span><br>
+                                    <span>$2000</span><br>
                                     <span class="font14 gray">最小跟单金额</span>
                                 </p>
                             </li>
@@ -606,8 +641,8 @@
                            <p><span></span>关于收益</p>
                            <p><span></span>关于平台差异</p>
                            <p><span></span>关于风险</p>
+                           <a href="clause.html" class="btn">查看更多</a>
                        </dd>
-                       <dd><a href="clause.html" class="btn">查看更多</a></dd>
                    </dl>
                </li>
                <li>
@@ -618,8 +653,8 @@
                            <p><span></span>出金限制</p>
                            <p><span></span>最小做单的单位是多少</p>
                            <p><span></span>什么是隔夜利息</p>
+                           <a href="problem.html" class="btn">查看更多</a>
                        </dd>
-                       <dd><a href="problem.html" class="btn">查看更多</a></dd>
                    </dl>
                </li> 
                <li>
@@ -629,9 +664,9 @@
                        <dd class="text">
                            <p><span></span>如何避开投资骗局</p>
                            <p><span></span>带你避开投资骗局 </p>
-                           <p><span></span>ROBIN FIN 与TradeMax 正式合作签约</p>
+                           <p><span></span>ROBIN FIN 与TradeMax签约</p>
+                           <a href="reports.html" class="btn">查看更多</a>
                        </dd>
-                       <dd><a href="reports.html" class="btn">查看更多</a></dd>
                    </dl>
                </li>  
             </ul>  
@@ -655,7 +690,7 @@
         </dl>
         <dl class="inline contact">
             <dt>客服电话（9:00-17:00）</dt>
-            <dd class="phone"><a href="tel:400-155-7399">+400-155-7399</a></dd>
+            <dd class="phone"><a href="tel:400-155-7399">+4001557366</a></dd>
             <dd>
                 <span class="icon icon-wei"></span>
                 <span class="icon icon-qq"></span>

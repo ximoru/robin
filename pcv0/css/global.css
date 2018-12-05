@@ -30,6 +30,7 @@ a:hover{color:#ea5404;text-decoration:none;}
 .relative{position:relative;}
 .absolute{position:absolute;}
 .bold{font-weight:700;}
+.indent{text-indent: 2em}
 .hide{display:none;}
 .block{display:block;}
 .inline{display:inline-block;*display: inline;*zoom:1;vertical-align: top}
@@ -90,79 +91,28 @@ a:hover{color:#ea5404;text-decoration:none;}
 .button-disabled:hover{background-color:#ddd;color:#999;}
 
 /*头部*/
-.header{
-  width: 100%;
-  height: 70px;
-  z-index: 9999;
-}
-.header-wrap{
-  margin: 0 auto;
-  width: 1200px;
-}
-.header-nav-logo{
-  float: left;
-  margin-top: 20px;
-  display: inline-block;
-}
-.header-nav-logo img{
-  width:228px;
-  height:28px;
-  display: block;
-}
-.header-nav-main{
-  float: right
-}
-.header-nav-main li{
-  position: relative;
-  float:left;
-  margin:0 20px;
-  line-height: 46px;
-  text-align: center;
-  line-height: 70px;
-}
-.header-nav-main li .menu{
-  color:#b4b4b4;
-  padding:8px 15px;
-}
-.header-nav-main li.current .menu{  
-  color:#fff;
-  background-color:#c8a56f;
-  border-radius:3px;
-  position: relative;
-}
-.header-nav-main .classification{
-  position: absolute;
-  left: 0;
-  z-index: 9999;
-  display: none;
-  top:48px;
-  border-radius: 3px;
-}
-.header-nav-main .classification .menu_drop{
-  font-size:14px;
-  color:#fff;
-  line-height: 35px;
-  padding:0 15px;
-  height: 35px;
-  display: inline-block;
-  background: #c8a56f;
-}
-.header-nav-main .classification .menu_drop:hover{
-  background-color:rgba(200,165,111, .9);
-}
-.header-nav-main .classification .menu_drop:last-child{
-  border-radius: 0 0 3px 3px;
-}
+.header{width: 100%;height: 70px;z-index: 9999;}
+.header-wrap{margin: 0 auto;width: 1000px;}
+.header-nav-logo{float: left;margin-top: 20px;display: inline-block;}
+.header-nav-logo img{width:228px;height:28px;display: block;}
+.header-nav-main{float: right}
+.header-nav-main li{position: relative;float:left;margin:0 20px;line-height: 46px;text-align: center;line-height: 70px;}
+.header-nav-main li .menu{color:#b4b4b4;padding:8px 15px;}
+.header-nav-main li.current .menu{  color:#fff;background-color:#c8a56f;border-radius:3px;position: relative;}
+.header-nav-main .classification{position: absolute;left: 0;z-index: 9999;display: none;top:48px;border-radius: 3px;}
+.header-nav-main .classification .menu_drop{font-size:14px;color:#fff;line-height: 35px;padding:0 15px;height: 35px;display: inline-block;background: #c8a56f;}
+.header-nav-main .classification .menu_drop:hover{background-color:rgba(200,165,111, .9);}
+.header-nav-main .classification .menu_drop:last-child{border-radius: 0 0 3px 3px;}
 
-.footer{background-color: #1a1a1a;}
-.footer-wrap{width: 1200px;margin:auto;overflow: hidden;padding:30px 0 130px;white-space: nowrap;overflow: hidden;}
+.footer{border-top:45px solid #313131;}
+.footer-wrap{width: 1200px;margin:auto;overflow: hidden;padding:50px 0;font-size:14px;}
 .footer-wrap ul{padding:0  60px 0 40px;}
 .footer-wrap ul>li{float: left;padding:0 50px;}
-.footer-wrap ul a{color:#b4b4b4;font-size:16px;}
+.footer-wrap ul a{color:#b4b4b4;font-size:1p4x;}
 .footer-wrap ul a:hover{color:#fff;}
 .footer-wrap .qrcode img{width: 118px;height: 118px;display: block;margin:auto;}
-.footer-wrap .qrcode dd{font-size:15px;color:#fff;text-align: center;padding-top: 8px;}
-.footer-wrap .contact{padding:0 40px;color:#fff;font-size:15px;}
+.footer-wrap .qrcode dd{color:#fff;text-align: center;padding-top: 8px;}
+.footer-wrap .contact{padding:0 40px;color:#fff;}
 .footer-wrap .contact .phone{padding:10px 0;}
 .footer-wrap .contact .phone a{font-size:26px;color:#fff;font-weight: 700}
 .footer-about .footer-logo,.footer-about .footer-list{padding:20px 0;border-bottom:1px solid #FFFFFF;}
@@ -220,5 +170,11 @@ a:hover{color:#ea5404;text-decoration:none;}
 .full-screen .container{padding-bottom:230px;}
 .full-screen .container-wrap{position:relative;min-height: 100%;height: auto!important;height:100%;}
 .full-screen .footer{position:absolute;left:0;right:0;bottom:0;}
-/*my*/
-#curr a{ font-size:12px;}
+
+.animated{-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both}
+.animated.infinite {-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite}
+.animated.hinge {-webkit-animation-duration: 2s;animation-duration: 2s;}
+
+
+
+
