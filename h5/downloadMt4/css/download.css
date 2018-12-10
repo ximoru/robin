@@ -5,5 +5,5 @@
 .download img{width:100%;display: block;margin:auto;}
 .download dd:last-child{text-align: center;padding:30px 0;display: block;}
 .download .btn{width:140px;height:36px;margin:0 auto 16px;display: block;background-color: #333;background: url(../img/appStore.png) no-repeat center top;background-size:100% 100%;}
-.download .and_btn{width:120px;height:31px;background: url(../img/android_download.png) no-repeat center top;background-size:100% 100%;}
+.download .and_btn{width:150px;height:40px;background: url(../img/android_download.png) no-repeat center top;background-size:100% 100%;margin: 0 auto 30px;}
 .download .google_lay{background:url(../img/google_play.png) no-repeat center top;background-size:100% 100%;}
